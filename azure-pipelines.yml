@@ -1,6 +1,8 @@
 trigger:
 - rer-dev
 
+pr: none
+
 pool:
  vmImage: 'ubuntu-latest'
 
