@@ -22,6 +22,7 @@ namespace GovUkDesignSystem.TagHelpers
         public override async void Process(TagHelperContext context, TagHelperOutput output)
         {
             output.TagName = null;
+            ViewContext.ModelState.TryGetValue(Name, out var modelStateEntry);
 
             var textInput = new TextInputViewModel
             {
@@ -36,6 +37,7 @@ namespace GovUkDesignSystem.TagHelpers
                 },
                 Name = Name,
                 Id = Id,
+                Value = modelStateEntry?.AttemptedValue,
                 Classes = Class,
                 ErrorMessage = ErrorMessageViewModel(Id),
                 ErrorMessageRequired = ErrorMessageIfMissing()
