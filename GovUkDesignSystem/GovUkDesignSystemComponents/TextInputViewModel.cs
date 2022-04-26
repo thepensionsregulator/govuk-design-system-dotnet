@@ -1,6 +1,6 @@
-﻿using System;
+﻿using GovUkDesignSystem.GovUkDesignSystemComponents.SubComponents;
+using System;
 using System.Collections.Generic;
-using GovUkDesignSystem.GovUkDesignSystemComponents.SubComponents;
 
 namespace GovUkDesignSystem.GovUkDesignSystemComponents
 {
@@ -67,6 +67,11 @@ namespace GovUkDesignSystem.GovUkDesignSystemComponents
         ///     value.
         /// </summary>
         public string Pattern { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the error message to show if the field is required. If null or empty, the field is not required.
+        /// </summary>
+        public string ErrorMessageRequired { get; set; }
 
         /// <summary>
         ///     Classes to add to the textarea.
